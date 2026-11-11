@@ -8,8 +8,8 @@
     "node": "22.x"
   },
   "scripts": {
-    "start": "node --disable-warning=ExperimentalWarning server.js",
-    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "start": "node --disable-warning=ExperimentalWarning platform.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch platform.js",
     "test": "node test/smoke.js"
   }
 }

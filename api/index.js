@@ -3,7 +3,7 @@
 // For a real deployment use a host with a persistent disk (Render, Railway, Fly, VPS) — see README.
 process.env.DATA_DIR = process.env.DATA_DIR || '/tmp/toropinto';
 process.env.DISABLE_JOBS = '1';
-const app = require('../server');
+const app = require('../platform');
 let ready;
 module.exports = async (req, res) => {
   try {

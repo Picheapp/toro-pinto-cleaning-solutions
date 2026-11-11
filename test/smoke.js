@@ -43,7 +43,7 @@ const nextWeekday = () => { const d = new Date(); d.setDate(d.getDate() + 3); wh
 
 (async () => {
   await new Promise((r) => mock.listen(STRIPE_PORT, '127.0.0.1', r));
-  const srv = spawn(process.execPath, ['--disable-warning=ExperimentalWarning', path.join(__dirname, '..', 'server.js')], {
+  const srv = spawn(process.execPath, ['--disable-warning=ExperimentalWarning', path.join(__dirname, '..', 'platform.js')], {
     env: { ...process.env, PORT: String(PORT), DATA_DIR: DIR, DISABLE_JOBS: '1', ADMIN_EMAIL: 'admin@smoke.test', ADMIN_PASSWORD: 'SmokeAdmin#2026', STRIPE_SECRET_KEY: 'sk_test_mock', STRIPE_WEBHOOK_SECRET: WHSEC, STRIPE_API_BASE: `http://127.0.0.1:${STRIPE_PORT}`, BASE_URL: BASE },
     stdio: ['ignore', 'pipe', 'pipe'],
   });
@@ -83,7 +83,7 @@ const nextWeekday = () => { const d = new Date(); d.setDate(d.getDate() + 3); wh
     ok(r.status === 400, 'unsigned Stripe webhook rejected');
     r = await anon('GET', '/api/files/1'); ok(r.status === 401 || r.status === 403 || r.status === 404, 'private files are not public');
     r = await anon('GET', '/.env'); ok(r.status === 404, '.env is not served');
-    r = await anon('GET', '/../server.js'); ok(r.status === 404 || r.status === 400, 'path traversal blocked');
+    r = await anon('GET', '/../platform.js'); ok(r.status === 404 || r.status === 400, 'path traversal blocked');
     ok((r.headers.get('content-security-policy') || (await anon('GET', '/')).headers.get('content-security-policy') || '').includes("default-src 'self'"), 'CSP header present');
 
     console.log('\nCustomer booking → invoice → Stripe');
