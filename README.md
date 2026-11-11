@@ -59,3 +59,6 @@ Catalog / content fields have `…_es` twins in the admin editors.
 
 ## Security notes
 Passwords hashed with scrypt; HttpOnly SameSite cookie sessions; CSRF header + Origin check; strict CSP (no inline scripts); rate-limited auth and uploads; images re-validated by magic bytes; prices are always recomputed on the server; Stripe webhooks are HMAC-verified with replay tolerance.
+
+## Vercel (demo only)
+`api/index.js` + `vercel.json` let you preview the site on Vercel. Vercel has **no persistent disk**, so bookings, customers and uploads are stored in `/tmp` and are **lost on restarts / may differ between instances**. Use it to show the design to a client, never to take real bookings. For production use Render, Railway, Fly or a VPS with a persistent disk.

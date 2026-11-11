@@ -1,11 +1,11 @@
 {
   "name": "toro-pinto-platform",
   "version": "1.0.0",
-  "description": "Toro Pinto Cleaning Solutions — one-page website, booking, store, CRM, invoicing and admin platform (zero dependencies).",
+  "description": "Toro Pinto Cleaning Solutions \u2014 one-page website, booking, store, CRM, invoicing and admin platform (zero dependencies).",
   "private": true,
   "license": "UNLICENSED",
   "engines": {
-    "node": ">=22.5.0"
+    "node": "22.x"
   },
   "scripts": {
     "start": "node --disable-warning=ExperimentalWarning server.js",

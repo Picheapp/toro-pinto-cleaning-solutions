@@ -1,0 +1,6 @@
+{
+  "buildCommand": "mkdir -p .static && cp -r public/img public/css public/js public/manifest.webmanifest .static/",
+  "outputDirectory": ".static",
+  "functions": { "api/index.js": { "includeFiles": "{public,lib,routes}/**", "maxDuration": 30 } },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }]
+}
