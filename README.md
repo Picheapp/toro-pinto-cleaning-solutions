@@ -62,3 +62,5 @@ Passwords hashed with scrypt; HttpOnly SameSite cookie sessions; CSRF header + O
 
 ## Vercel (demo only)
 `api/index.js` + `vercel.json` let you preview the site on Vercel. Vercel has **no persistent disk**, so bookings, customers and uploads are stored in `/tmp` and are **lost on restarts / may differ between instances**. Use it to show the design to a client, never to take real bookings. For production use Render, Railway, Fly or a VPS with a persistent disk.
+
+The Vercel project builds with framework preset **Other** (not "Node"), and the app entry is `platform.js` (a root `server.js` would be mistaken for the function entry).
