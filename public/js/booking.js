@@ -35,7 +35,7 @@ export function summaryHtml(est, { deposit = true } = {}) {
 
 const PROPS = {
   residential: ['House', 'Apartment / Condo', 'Townhouse', 'Vacation rental', 'Other'],
-  commercial: ['Office', 'Retail store', 'Restaurant', 'Warehouse / Industrial', 'Medical / Clinic', 'School / Church', 'Other'],
+  commercial: ['Restaurant', 'Fast-food / Quick service', 'Retail store', 'Warehouse / Industrial', 'Medical / Clinic', 'School / Church', 'Other'],
 };
 const FREQ_LABEL = { once: 'One-time', weekly: 'Weekly', biweekly: 'Every 2 weeks', monthly: 'Monthly' };
 

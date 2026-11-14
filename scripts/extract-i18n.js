@@ -21,6 +21,7 @@ for (const a of ['data-t', 'data-t-ph', 'data-t-aria']) { const re = new RegExp(
   'Awaiting payment', 'Processing', 'Ready for pickup', 'Shipped', 'Delivered',
   'In Progress', 'New Lead', 'Contacted', 'Quote Sent', 'Awaiting Approval', 'Booked', 'Paid', 'VIP', 'Active', 'At risk', 'Inactive', 'New', 'Prospect',
   'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
+  'House', 'Apartment / Condo', 'Townhouse', 'Vacation rental', 'Restaurant', 'Fast-food / Quick service', 'Retail store', 'Warehouse / Industrial', 'Medical / Clinic', 'School / Church',
   'Supplies', 'Fuel', 'Equipment', 'Payroll', 'Insurance', 'Marketing', 'Vehicle', 'Software',
   'Appointment reminders', 'Overdue invoice reminders', 'Review requests', 'Membership renewals', 'Housekeeping', 'Win-back campaign (inactive customers)',
 ].forEach((k) => keys.add(k));

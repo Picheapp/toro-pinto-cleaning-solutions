@@ -23,6 +23,7 @@ const icons = {
   box: '<path d="M320 270 L400 230 L480 270 V350 L400 390 L320 350 Z M320 270 L400 310 L480 270 M400 310 V390" />',
   office: '<path d="M320 250 H480 V335 H320 Z M370 380 H430 M400 335 V380 M345 285 H410" />',
   hardhat: '<path d="M315 335 H485 M330 335 C330 270 365 235 400 235 C435 235 470 270 470 335 M400 235 V335 M365 250 V335 M435 250 V335" />',
+  chef: '<path d="M325 300 H475 V365 Q475 385 455 385 H345 Q325 385 325 365 Z M325 320 H300 M475 320 H500 M355 300 C355 270 380 262 400 262 C420 262 445 270 445 300 M370 235 C375 215 395 215 400 235 M405 235 C410 212 430 218 430 238" />',
   refresh: '<path d="M470 275 A75 75 0 0 0 335 270 M335 270 L330 235 M335 270 L372 268 M330 320 A75 75 0 0 0 465 330 M465 330 L470 365 M465 330 L428 332" />',
   spray: '<path d="M360 380 V300 H430 V380 Z M375 300 V270 H415 V300 M415 280 H455 M470 262 L492 250 M470 282 H498 M470 302 L492 314" />',
 };
@@ -35,8 +36,7 @@ function categoryArt(name, icon, seed, hueShift) {
 <g fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">${icons[icon]}</g></svg>`;
 }
 const cats = [
-  ['residential-cleaning', 'house', 11, '#0F8F94'], ['commercial-cleaning', 'building', 22, '#1A4E8C'], ['deep-cleaning', 'sparkle', 33, '#14A7B5'],
-  ['move-in-move-out', 'box', 44, '#2A5F9E'], ['office-cleaning', 'office', 55, '#0F7F8E'], ['post-construction', 'hardhat', 66, '#27508A'],
+  ['residential-cleaning', 'house', 11, '#0F8F94'], ['commercial-cleaning', 'building', 22, '#1A4E8C'], ['restaurant-kitchen', 'chef', 33, '#14A7B5'],
   ['recurring-cleaning', 'refresh', 77, '#12A19E'], ['specialized', 'spray', 88, '#1E6AA8'],
 ];
 for (const [slug, icon, seed, c] of cats) fs.writeFileSync(path.join(out, `cat-${slug}.svg`), categoryArt(slug, icon, seed, c));
@@ -58,7 +58,7 @@ function productArt(kind, label, accent = TEAL, seed = 3) {
 const prods = [
   ['all-purpose', 'spray', 'ALL-PURPOSE', TEAL], ['degreaser', 'jug', 'DEGREASER', '#F2A300'], ['glass', 'spray', 'GLASS', '#4C8DFF'],
   ['microfiber', 'cloth', 'MICROFIBER', TEAL], ['squeegee', 'squeegee', 'SQUEEGEE', TEAL], ['floor', 'jug', 'FLOOR', '#25B26B'],
-  ['sanitizer', 'spray', 'SANITIZER', '#8B5CF6'], ['bundle-home', 'bundle', 'HOME BUNDLE', TEAL], ['bundle-office', 'bundle', 'OFFICE BUNDLE', '#4C8DFF'], ['bucket', 'bucket', 'PRO KIT', TEAL],
+  ['sanitizer', 'spray', 'SANITIZER', '#8B5CF6'], ['bucket', 'bucket', 'PRO KIT', TEAL],
 ];
 for (const [slug, kind, label, accent] of prods) fs.writeFileSync(path.join(out, `prod-${slug}.svg`), productArt(kind, label, accent));
 

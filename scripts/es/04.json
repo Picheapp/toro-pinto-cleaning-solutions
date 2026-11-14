@@ -212,5 +212,15 @@
 "— New customer —": "— Cliente nuevo —",
 "— none —": "— ninguno —",
 "…or for one service": "…o para un solo servicio",
-"In Progress": "En progreso"
+"In Progress": "En progreso",
+"House": "Casa",
+"Apartment / Condo": "Apartamento / Condominio",
+"Townhouse": "Casa en hilera (townhouse)",
+"Vacation rental": "Alquiler vacacional",
+"Restaurant": "Restaurante",
+"Fast-food / Quick service": "Comida rápida / Servicio rápido",
+"Retail store": "Tienda / Comercio",
+"Warehouse / Industrial": "Almacén / Industrial",
+"Medical / Clinic": "Médico / Clínica",
+"School / Church": "Escuela / Iglesia"
 }
